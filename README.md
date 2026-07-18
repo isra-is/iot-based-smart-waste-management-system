@@ -183,8 +183,6 @@ Bin Reset to 0%
 
 ## Wokwi Circuit
 
-# 📸 Hardware Setup
-
 <p align="center">
   <img width="906" height="642" alt="wokwi setup" src="https://github.com/user-attachments/assets/ca94e86b-1b99-4fe9-8577-b91f106d9356" />
 
