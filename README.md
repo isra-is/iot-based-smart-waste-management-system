@@ -186,7 +186,8 @@ Bin Reset to 0%
 # 📸 Hardware Setup
 
 <p align="center">
-  <img src="images/hardware_setup.jpg" alt="ESP32 Smart Waste Management Hardware Setup" width="900">
+  <img width="906" height="642" alt="wokwi setup" src="https://github.com/user-attachments/assets/ca94e86b-1b99-4fe9-8577-b91f106d9356" />
+
 </p>
 
 **Figure 1:** Complete Wokwi simulation showing the ESP32-based Smart Waste Management System with dual HC-SR04 ultrasonic sensors, 20×4 I2C LCD, servo motor, and virtual serial monitor.
