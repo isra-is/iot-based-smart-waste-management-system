@@ -287,7 +287,7 @@ The complete project documentation is available in the **docs** folder.
 
 # 👨‍🏫 Project Guide
 
-**<!-- Akshata Dange -->**
+**<!- Akshata Dange ->**
 
 ---
 
