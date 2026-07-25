@@ -203,9 +203,9 @@ Bin Reset to 0%
 
 |17% Fill|51% Fill|
 |---------|---------|
-|!(<img width="958" height="983" alt="fill17" src="https://github.com/user-attachments/assets/8c25a85d-f8af-4b08-b7fc-d17c9f2b0a6c" />
-)|!(<img width="961" height="981" alt="fill51" src="https://github.com/user-attachments/assets/caeddb98-282d-4835-ba32-1ab4b6a560f5" />
-)|
+|<img width="958" height="983" alt="fill17" src="https://github.com/user-attachments/assets/8c25a85d-f8af-4b08-b7fc-d17c9f2b0a6c" />
+|<img width="961" height="981" alt="fill51" src="https://github.com/user-attachments/assets/caeddb98-282d-4835-ba32-1ab4b6a560f5" />
+|
 
 ---
 
