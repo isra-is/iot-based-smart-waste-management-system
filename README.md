@@ -194,7 +194,8 @@ Bin Reset to 0%
 
 ## System Startup
 
-![Startup](images/startup.png)
+![Startup](<img width="963" height="995" alt="startup" src="https://github.com/user-attachments/assets/e07d3e2c-3bf0-4d35-b2e3-e3b76717e98b" />
+)
 
 ---
 
@@ -202,7 +203,9 @@ Bin Reset to 0%
 
 |17% Fill|51% Fill|
 |---------|---------|
-|![](images/fill17.png)|![](images/fill51.png)|
+|![](<img width="958" height="983" alt="fill17" src="https://github.com/user-attachments/assets/8c25a85d-f8af-4b08-b7fc-d17c9f2b0a6c" />
+)|![](<img width="961" height="981" alt="fill51" src="https://github.com/user-attachments/assets/caeddb98-282d-4835-ba32-1ab4b6a560f5" />
+)|
 
 ---
 
@@ -210,13 +213,16 @@ Bin Reset to 0%
 
 |75% Alert|95% Alert|
 |----------|----------|
-|![](images/alert75.png)|![](images/alert95.png)|
+|![](<img width="968" height="947" alt="alert75" src="https://github.com/user-attachments/assets/1383ba90-7e2a-41ef-9e51-06eda13efccd" />
+)|![](<img width="955" height="936" alt="alert95" src="https://github.com/user-attachments/assets/e5118859-ba5d-4b3b-8224-de004f201b6b" />
+)|
 
 ---
 
 ## Garbage Collection
 
-![Collection](images/collection.png)
+![Collection](<img width="966" height="938" alt="collection" src="https://github.com/user-attachments/assets/8e90faa8-d94d-44fc-9a20-7020fd7f1446" />
+)
 
 ---
 
