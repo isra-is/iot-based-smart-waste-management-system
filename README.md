@@ -1,3 +1,4 @@
+````markdown
 # ♻️ IoT-Based Smart Waste Management System
 
 <p align="center">
@@ -26,11 +27,9 @@ https://wokwi.com/projects/449653586435836929
 
 # 📖 Project Overview
 
-The **IoT-Based Smart Waste Management System** is designed to improve urban waste collection using IoT technology. Traditional waste collection follows fixed schedules, often resulting in overflowing bins or unnecessary collection trips.
+The **IoT-Based Smart Waste Management System** is an intelligent waste monitoring solution developed using **ESP32** and IoT technologies. The system continuously measures the garbage level using ultrasonic sensors, automatically opens the lid when a user approaches, displays live information on a 20×4 LCD, and sends notifications through the **Blynk IoT Cloud**.
 
-This project uses an **ESP32 microcontroller**, ultrasonic sensors, a servo motor, and a 20×4 LCD display to continuously monitor the garbage level. The system sends updates to the **Blynk IoT Cloud**, generates notifications when the dustbin reaches critical levels, and simulates the garbage collection process.
-
-The project demonstrates how IoT can help create cleaner cities by enabling smart, real-time waste monitoring.
+Instead of following fixed garbage collection schedules, this smart system enables **real-time monitoring**, helping municipal authorities optimize collection routes, reduce overflowing bins, and improve urban cleanliness.
 
 ---
 
@@ -38,13 +37,13 @@ The project demonstrates how IoT can help create cleaner cities by enabling smar
 
 - ♻️ Smart garbage fill-level monitoring
 - 📏 Dual HC-SR04 ultrasonic sensors
-- 🚶 Object detection
-- 🛠 Automatic lid opening using servo motor
-- 📺 20×4 I2C LCD display
-- ☁️ Blynk IoT cloud integration
-- 📍 GPS location support (simulation)
-- 📲 GSM/SMS alert logic (simulation)
-- 🚛 Truck notification system
+- 🚶 User/object detection
+- 🛠 Automatic lid opening using Servo Motor
+- 📺 20×4 I2C LCD Display
+- ☁️ Blynk IoT Cloud Integration
+- 📍 GPS location logic (Simulation)
+- 📲 GSM/SMS notification logic (Simulation)
+- 🚛 Smart truck notification system
 - ⚠️ Overflow detection
 - 🔄 Automatic reset after garbage collection
 - 🌍 Fully simulated using Wokwi
@@ -57,18 +56,18 @@ The project demonstrates how IoT can help create cleaner cities by enabling smar
 |-----------|----------|
 | ESP32 DevKit V1 | 1 |
 | HC-SR04 Ultrasonic Sensor | 2 |
-| Servo Motor | 1 |
-| 20×4 I2C LCD | 1 |
-| NEO-6M GPS Module | 1 *(logic implemented)* |
-| SIM900A GSM Module | 1 *(logic implemented)* |
+| Servo Motor SG90 | 1 |
+| 20×4 I2C LCD Display | 1 |
+| NEO-6M GPS Module | 1 *(Logic Implemented)* |
+| SIM900A GSM Module | 1 *(Logic Implemented)* |
 | Jumper Wires | As Required |
 
 ---
 
 # 🔌 ESP32 Pin Mapping
 
-| Component | GPIO Pin |
-|-----------|----------|
+| Component | GPIO |
+|-----------|------|
 | Object Sensor Trigger | GPIO 13 |
 | Object Sensor Echo | GPIO 14 |
 | Fill Level Trigger | GPIO 18 |
@@ -86,9 +85,9 @@ The project demonstrates how IoT can help create cleaner cities by enabling smar
 - Wokwi Simulator
 - Blynk IoT
 - Wire Library
-- LiquidCrystal_I2C
-- WiFi
-- WiFiClient
+- LiquidCrystal_I2C Library
+- WiFi Library
+- WiFiClient Library
 
 ---
 
@@ -154,7 +153,7 @@ LCD Displays Fill Percentage
 Blynk Dashboard Updated
           │
           ▼
-75% Alert → Truck 1
+75% Alert → Truck Notification
 95% Alert → Emergency Notification
 100% → Overflow Warning
           │
@@ -162,7 +161,7 @@ Blynk Dashboard Updated
 Garbage Collection
           │
           ▼
-Bin Reset to 0%
+Bin Reset
 ```
 
 ---
@@ -171,64 +170,87 @@ Bin Reset to 0%
 
 | Fill Level | Status | Action |
 |------------|--------|--------|
-| 0–49% | 🟢 Normal | Monitoring |
-| 50–74% | 🟡 Moderate | Continue Monitoring |
-| 75–94% | 🟠 Almost Full | Truck 1 Notification |
-| 95–99% | 🔴 Critical | Notify All Trucks |
-| 100% | ⚫ Overflow | Immediate Collection |
+| 🟢 0–49% | Normal | Monitoring |
+| 🟡 50–74% | Moderate | Continue Monitoring |
+| 🟠 75–94% | Almost Full | Notify Collection Truck |
+| 🔴 95–99% | Critical | Notify All Trucks |
+| ⚫ 100% | Overflow | Immediate Collection |
 
 ---
 
 # 📸 Project Gallery
 
-## Wokwi Circuit
+## 🖥️ Wokwi Circuit
 
 <p align="center">
-  <img width="906" height="642" alt="wokwi setup" src="https://github.com/user-attachments/assets/ca94e86b-1b99-4fe9-8577-b91f106d9356" />
-
+<img src="https://github.com/user-attachments/assets/ca94e86b-1b99-4fe9-8577-b91f106d9356" width="850" alt="Wokwi Circuit"/>
 </p>
 
-**Figure 1:** Complete Wokwi simulation showing the ESP32-based Smart Waste Management System with dual HC-SR04 ultrasonic sensors, 20×4 I2C LCD, servo motor, and virtual serial monitor.
+<p align="center">
+<b>Figure 1:</b> Complete ESP32 Smart Waste Management Simulation.
+</p>
 
 ---
 
-## System Startup
+## 🚀 System Startup
 
-![Startup](<img width="963" height="995" alt="startup" src="https://github.com/user-attachments/assets/e07d3e2c-3bf0-4d35-b2e3-e3b76717e98b" />
-)
-
----
-
-## Fill Level Monitoring
-
-|17% Fill|51% Fill|
-|---------|---------|
-|<img width="958" height="983" alt="fill17" src="https://github.com/user-attachments/assets/8c25a85d-f8af-4b08-b7fc-d17c9f2b0a6c" />
-|<img width="961" height="981" alt="fill51" src="https://github.com/user-attachments/assets/caeddb98-282d-4835-ba32-1ab4b6a560f5" />
-|
+<p align="center">
+<img src="https://github.com/user-attachments/assets/e07d3e2c-3bf0-4d35-b2e3-e3b76717e98b" width="650" alt="System Startup"/>
+</p>
 
 ---
 
-## Alert Notifications
+## 📊 Fill Level Monitoring
 
-|75% Alert|95% Alert|
-|----------|----------|
-|![](<img width="968" height="947" alt="alert75" src="https://github.com/user-attachments/assets/1383ba90-7e2a-41ef-9e51-06eda13efccd" />
-)|![](<img width="955" height="936" alt="alert95" src="https://github.com/user-attachments/assets/e5118859-ba5d-4b3b-8224-de004f201b6b" />
-)|
+<table align="center">
+<tr>
+
+<td align="center">
+<b>17% Fill Level</b><br><br>
+<img src="https://github.com/user-attachments/assets/8c25a85d-f8af-4b08-b7fc-d17c9f2b0a6c" width="350"/>
+</td>
+
+<td align="center">
+<b>51% Fill Level</b><br><br>
+<img src="https://github.com/user-attachments/assets/caeddb98-282d-4835-ba32-1ab4b6a560f5" width="350"/>
+</td>
+
+</tr>
+</table>
 
 ---
 
-## Garbage Collection
+## 🚨 Alert Notifications
 
-![Collection](<img width="966" height="938" alt="collection" src="https://github.com/user-attachments/assets/8e90faa8-d94d-44fc-9a20-7020fd7f1446" />
-)
+<table align="center">
+<tr>
+
+<td align="center">
+<b>75% Alert</b><br><br>
+<img src="https://github.com/user-attachments/assets/1383ba90-7e2a-41ef-9e51-06eda13efccd" width="350"/>
+</td>
+
+<td align="center">
+<b>95% Alert</b><br><br>
+<img src="https://github.com/user-attachments/assets/e5118859-ba5d-4b3b-8224-de004f201b6b" width="350"/>
+</td>
+
+</tr>
+</table>
+
+---
+
+## ♻️ Garbage Collection
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8e90faa8-d94d-44fc-9a20-7020fd7f1446" width="650" alt="Garbage Collection"/>
+</p>
 
 ---
 
 # 📄 Documentation
 
-The complete project documentation is available in the **docs** folder.
+The **docs** folder contains:
 
 - 📘 Mini Project Synopsis
 - 📄 Final Project Report
@@ -239,7 +261,7 @@ The complete project documentation is available in the **docs** folder.
 
 # ▶️ How to Run
 
-### Wokwi Simulation
+## Wokwi Simulation
 
 1. Open the Wokwi project.
 2. Click **Start Simulation**.
@@ -248,14 +270,16 @@ The complete project documentation is available in the **docs** folder.
 5. Monitor the Serial Monitor.
 6. Observe Blynk dashboard updates.
 
-### Arduino IDE
+---
+
+## Arduino IDE
 
 1. Install Arduino IDE.
 2. Install the ESP32 Board Package.
 3. Install the required libraries.
 4. Open `smart_waste_management.ino`.
 5. Replace the Blynk credentials with your own.
-6. Upload the sketch to the ESP32.
+6. Upload the code to the ESP32.
 
 ---
 
@@ -277,7 +301,7 @@ The complete project documentation is available in the **docs** folder.
 - 🚛 Smart Route Optimization
 - 📍 Real-Time GPS Tracking
 - 📲 Real GSM SMS Alerts
-- 🌞 Solar-Powered Smart Bin
+- 🌞 Solar-Powered Smart Dustbin
 - 🏙 Smart City Dashboard
 
 ---
@@ -287,21 +311,23 @@ The complete project documentation is available in the **docs** folder.
 - **Isra Zainab**
 - **Madeeha Mohammed Mubeen**
 - **Saniya Naz**
-- **Shamma Shirin M.A**
+- **Shamma Shirin M. A.**
 
 ---
 
 # 👨‍🏫 Project Guide
 
-**<!- Akshata Dange ->**
+**Akshata Dange**
 
 ---
 
 # 🏫 Institution
 
-**<Yenepoya Institute Of Technology>**
+**Yenepoya Institute of Technology**
 
-**Department of Computer Science and Engineering (IoT, Cyber Security with Blockchain Technology)**
+Department of Computer Science and Engineering
+
+**Specialization:** IoT, Cyber Security with Blockchain Technology
 
 **Academic Year:** 2025–2026
 
@@ -311,7 +337,7 @@ The complete project documentation is available in the **docs** folder.
 
 This project is licensed under the **MIT License**.
 
-See the **LICENSE** file for complete details.
+See the **LICENSE** file for more information.
 
 ---
 
@@ -327,8 +353,12 @@ See the **LICENSE** file for complete details.
 
 <p align="center">
 
-⭐ **If you like this project, consider giving it a Star on GitHub!** ⭐
+⭐ If you found this project useful, consider giving it a **Star ⭐** on GitHub!
 
 Made with ❤️ by **Isra Zainab and Team**
+
+</p>
+````
+
 
 </p>
